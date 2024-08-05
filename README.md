@@ -2,6 +2,7 @@
 # Password_Manager
 
 A simple password manager GUI built with Python's Tkinter. Features include account creation, password management, password generation, and bookmarking websites.
+A secure and user-friendly password manager application built to manage your digital credentials easily and safely.
 
 Login Page:
   Create New Account option for new users.
@@ -16,6 +17,9 @@ Password Generator:
 Bookmark Option:
   Save websites or links for easy access.
 
+# Description 
+         Python- Source code with Database as MySQL where login passwords are secured using Symmetric Encryption by importing cryptography.fernet to create symmetric key for encryption and decryption.
+
 # Let's Explore
 ![Screenshot 2024-08-05 225933](https://github.com/user-attachments/assets/3512007f-3e7b-46a2-9d7e-40bbd4bd2744)
                                       Login Page
@@ -29,6 +33,15 @@ Bookmark Option:
                                       Add Entry
 
 ![Screenshot 2024-08-05 230425](https://github.com/user-attachments/assets/689f6268-b4a3-4a68-a6f7-82051347bafd)
-                                      View Entry
+                        
+![Screenshot 2024-08-05 232952](https://github.com/user-attachments/assets/8ddf6b32-f128-4391-8051-52a4ecdff32d)
 
+                                        View Entry
+                                        
+![Screenshot 2024-08-05 230450](https://github.com/user-attachments/assets/75e8a23a-0417-4104-8929-8843d3ea0c06)
 
+                                    Password Generator
+
+![Screenshot 2024-08-05 230532](https://github.com/user-attachments/assets/136e0a91-e2b5-4527-b54a-266b63e76176)
+
+                                    Bookmark to store websites
