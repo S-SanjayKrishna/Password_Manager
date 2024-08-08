@@ -153,7 +153,7 @@ def generate():
                 password+=ps
         return password
     
-    def uppasswd(charlen,nolen,symbollen):
+    def uppasswd(charlen='0',nolen='0',symbollen='0'):
         
         new_password = gene(int(charlen),int(nolen),int(symbollen))
         entry_var.set(new_password)
@@ -173,7 +173,7 @@ def generate():
     entry_var=StringVar()
     passwd=Entry(generate_frame,width=15,bg='white',font=('calibre',16),state='readonly',textvariable=entry_var)
     passwd.place(x=565,y=450)
-    gen=Button(generate_frame,width=10,text='Generate',font=('System',14),command=lambda:uppasswd(charlen.get(),nolen.get(),symbollen.get()))
+    gen=Button(generate_frame,width=10,text='Generate',font=('System',14),command=lambda:uppasswd(charlen.get() if charlen.get()!='' else '0',nolen.get() if nolen.get()!='' else '0',symbollen.get() if symbollen.get()!='' else '0'))
     gen.place(x=600,y=490)
     
           
@@ -267,10 +267,12 @@ def indicate(lb,user):
     hideindicate()
     lb.configure(bg='darkblue')
     hideframes()
+    if user[0].isdigit():
+        user1='c'+user
     if lb==addent_indicate:
-        add(user)
+        add(user1)
     elif lb==view_indicate:
-        view(user)
+        view(user1)
     elif lb==genpass_indicate:
         generate()
     elif lb==url_indicate:
@@ -351,7 +353,7 @@ def encrypt_password(password):
     return cipher_suite.encrypt(password.encode())
 
 def decrypt_password(encrypted_password):
-    return cipher_suite.decrypt(encrypted_password).decode()
+    return (cipher_suite.decrypt(encrypted_password)).decode()
             
 
 
@@ -428,7 +430,7 @@ def logframe():
 
 
 
-con=sqltor.connect(host='<hostname>',user='<username>',passwd='<password>',database='<database_name>',port='<portno.>')
+con=sqltor.connect(host=<hostname>,user=<username>,passwd=<password>,database=<databasename>,port=<portno.>)
 
 cursor=con.cursor()
 
